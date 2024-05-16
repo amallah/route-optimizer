@@ -15,10 +15,11 @@ He wrote it as a [python notebook on git](https://github.com/rhiever/Data-Analys
 
 I highly recommend reading Dr. Olson's article, but here's my tldr of genetic algorithms in this specific context:
 
-Each house is a gene. So, at the beginning, we randomly pick a bunch of houses for each driver. We then calculate the distance to time to drive between all those houses in the random order.
+Each house is a gene. So, at the beginning, we randomly pick a bunch of houses for each driver. We then calculate the distance to time to drive between all those houses in the random order. Each collection of these is a child and there are 200 children created.
 
+We take the fastest 20 drives from pure random and then each of those drives gets 10 children - 1 will be a clone, 7 will have 1-3 point mutations (houses randomly changed), 2 of them will have a shuffle mutation (sequences of houses moved around)
 
-
+Then repeat - take the fastest 20 drives of that list and keep mutating them until we have 20000 generations.
 
 ## Getting Started
 
